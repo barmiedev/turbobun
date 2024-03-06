@@ -1,20 +1,24 @@
 {
-  "name": "my-turborepo",
+  "name": "turbobun",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "turbo format"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "prettier": "^3.2.5",
-    "turbo": "^1.12.4"
+    "@biomejs/biome": "^1.5.3",
+    "@repo/biome": "workspace:*",
+    "@repo/typescript": "workspace:*",
+    "turbo": "latest"
   },
-  "packageManager": "pnpm@8.9.0",
   "engines": {
-    "node": ">=18"
-  }
+    "node": ">=20"
+  },
+  "packageManager": "bun@1.0.30",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "format": "bun run biome format --write ./src",
+    "lint": "bun run biome lint ./src"
+  },
+  "dependencies": {
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@repo/biome": "workspace:*",
+    "@repo/typescript": "workspace:*"
+  },
+  "module": "src/index.js"
+}
